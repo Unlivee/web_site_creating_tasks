@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+{% block title %}
+    Страница о нас
+{% endblock %}
+
+{% block content %}
+    <h1>Удаления </h1>
+    <div class="alert alert-warning mt-2">
+        <h3>{{task.title}}</h3>
+        <p>{{task.task}}</p>
+        <p>{{task.author}}</p>
+    </div>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Удалить запись</button><br>
+    </form>
+{% endblock %}
